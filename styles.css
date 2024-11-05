@@ -49,23 +49,41 @@
   }
   
   /* Different layers with unique background images */
-  .layer1 {
-    background-image: url('static/Cover.png');
-    z-index: 4;
-    background-attachment: fixed;
-  }
-  
-  .layer2 {
-    background-image: url('static/Background.png');
-    z-index: 5;
-    opacity: 0.7;
-    background-attachment: fixed;
-  }
-  
-  .layer3 {
-    background-image: url('static/Eglantine-Chapter1-Wallpaper_2.png');
+  .layerhome1 {
+    background-image: url('static/Home_1.png');
     z-index: 6;
-    opacity: 0.5;
+    background-attachment: fixed;
+  }
+  
+  .layerhome2 {
+    background-image: url('static/Home_2.png');
+    z-index: 5;
+    opacity: 1;
+    background-attachment: fixed;
+  }
+  
+  .layerhome3 {
+    background-image: url('static/Home_3.png');
+    z-index: 4;
+    opacity: 1;
+    background-attachment: fixed;
+  }
+  .layerhome4 {
+    background-image: url('static/Home_4.png');
+    z-index: 3;
+    opacity: 1;
+    background-attachment: fixed;
+  }
+  .layerhome5 {
+    background-image: url('static/Home_5.png');
+    z-index: 2;
+    opacity: 1;
+    background-attachment: fixed;
+  }
+  .layerhome6 {
+    background-image: url('static/Home_6.png');
+    z-index: 1;
+    opacity: 1;
     background-attachment: fixed;
   }
 
