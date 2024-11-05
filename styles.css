@@ -1,0 +1,152 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    z-index: 10;
+  }
+  
+  .navbar {
+    z-index: 10;
+    
+    background-color: transparent !important; /* Make the navbar background transparent */
+    box-shadow: none; /* Optional: Remove any shadow if present */
+    
+  }
+  
+  /* Parallax container styling */
+  .parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 8;
+    opacity: 1;
+    
+  }
+
+  
+  
+  /* Parallax layers with background images */
+  .parallax-layer {
+    position: absolute;
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+      /*Essential for the parallax effect */
+  }
+  
+  /* Different layers with unique background images */
+  .layer1 {
+    background-image: url('static/Cover.png');
+    z-index: 4;
+    background-attachment: fixed;
+  }
+  
+  .layer2 {
+    background-image: url('static/Background.png');
+    z-index: 5;
+    opacity: 0.7;
+    background-attachment: fixed;
+  }
+  
+  .layer3 {
+    background-image: url('static/Eglantine-Chapter1-Wallpaper_2.png');
+    z-index: 6;
+    opacity: 0.5;
+    background-attachment: fixed;
+  }
+
+  .layer4 {
+    background-image: url('static/Background.png');
+    z-index: 2;
+    background-attachment: fixed;
+    
+  }
+  .layer5 {
+    /* Multiple background layers */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%,rgba(0, 0, 0, 0) 100%);
+    /* Background positions for each layer */
+    background-position: center;
+    
+    /* Background sizes for each layer */
+    background-size: 100%;
+    
+    /* Background repeat for each layer */
+    background-repeat: no-repeat;
+    
+    /* Background attachment properties */
+    background-attachment: scroll;
+    z-index: 30;
+    opacity: 1;
+}
+
+
+
+.layer6 {
+  /* Multiple background layers */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 80%,rgba(0, 0, 0, 1) 100%);
+  /* Background positions for each layer */
+  background-position: center;
+  
+  /* Background sizes for each layer */
+  background-size: 100%;
+  
+  /* Background repeat for each layer */
+  background-repeat: no-repeat;
+  
+  /* Background attachment properties */
+  background-attachment: scroll;
+  z-index: 30;
+  opacity: 1;
+}
+.layer7 {
+  background-image: url('static/Background_TO.png');
+  z-index: 2;
+  background-attachment: fixed;
+  
+}
+
+  
+  
+  /* Content styling for parallax section */
+  .parallax-container .content {
+    position: relative;
+    z-index: 10;
+    padding: 20vh 0;
+  }
+  
+  /* Static content sections */
+  .content-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    z-index: 20;
+  }
+  
+  .content-section h2 {
+    margin-bottom: 20px;
+  }
+  .carousel-inner img {
+    width: 100%; /* Ensure the image takes up full width of the carousel */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.carousel {
+    max-width: 70%; /* Set maximum width of carousel to 70% of the viewport */
+    margin: 0 auto; /* Center the carousel */
+}
+  
