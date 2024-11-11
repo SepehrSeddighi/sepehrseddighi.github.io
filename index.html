@@ -16,7 +16,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sepehr Seddighi</a>
+      <a class="navbar-brand" href="#"><h4>Sepehr Seddighi</h4></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,24 +28,35 @@
           <li class="nav-item">
             <a class="nav-link" href="#About">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Eglantine">Eglantine</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#Eglantine" role="button"  aria-expanded="false">Eglantine</a>
+            <ul class="dropdown-menu" aria-labelledby="eglantineDropdown">
+              
+              <li><a class="dropdown-item" href="#EglantineGameplay">Gameplay</a></li>
+              <li><a class="dropdown-item" href="#EglantineConceptArt">Concept Art</a></li>
+            </ul>
+            
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#TO">Twillight Obscura</a>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#TO" role="button"  aria-expanded="false">Twillight Obsucra</a>
+            <ul class="dropdown-menu" aria-labelledby="eglantineDropdown">
+              
+              <li><a class="dropdown-item" href="#TOGameplay">Gameplay</a></li>
+              <li><a class="dropdown-item" href="#TOConceptArt">Concept Art</a></li>
+            </ul>
+            
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Contact">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#TEST">test</a>
-          </li>
+          
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Parallax Section with Layered Backgrounds -->
+ 
   <div id="Home" class="parallax-container">
     <div class="parallax-layer layerhome1"></div>
     <div class="parallax-layer layerhome2"></div>
@@ -59,20 +70,58 @@
     </div>
   </div>
 
-  <!-- Other Sections with Static Background -->
+  
   
  
-  <div id="About" class="parallax-container">
+  <div id="About" class="parallax-container overflow-visible">
     
     <div class="parallax-layer layer5"></div>
     <div class="parallax-layer layer4"></div>
-    <div class="content">
-      <h1>About</h1>
-      <p>I am shalgham</p>
-    </div>
+    <div class="content container fluid">
+      <div class="row gy-5 ">
+          
+          <div class="col-md-4 ">
+              <h2>About Me</h2> 
+          </div>
+
+          
+          <div class="col-md-4 text-center ">
+              <h2>Softwares</h2>
+              <img src="static/App Logos.png" alt="Softwares" class="software-image">
+              <h3>Education</h3>
+              <p>Your education details here.</p>
+          </div>
+
+          
+          <div class="col-md-4">
+              <h2>Experiences</h2>
+              <p>Your experiences here.</p>
+          </div>
+      </div>
+  </div>
   </div>
 
+  
   <div id="Eglantine" class="parallax-container">
+    
+    <div class="parallax-layer layer4"></div>
+    
+    <div class="content container">
+      <div class="row gy-5 ">
+        <div class="col-md-12 ">
+          <img src="static/Eglantine_Logo.png" alt="Eglantine" class="eglantine-logo">
+          <p>Eglantine is a metroidvania platformer adventure game</p>
+      
+        </div>
+        <div class="col-md-12 ">
+          
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+  <div id="EglantineGameplay" class="parallax-container">
     
     <div class="parallax-layer layer4"></div>
     <div class="content">
@@ -112,32 +161,135 @@
     
    </div>
   </div>
-
-  <div id="TO" class="parallax-container">
+  <div id="EglantineConceptArt" class="parallax-container">
     
     <div class="parallax-layer layer4"></div>
-    <div class="parallax-layer layer6"></div>
     <div class="content">
-      <h1>Twillight Obscura</h1>
-      <p>man</p>
+      <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 70%; margin: auto;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/Eglantine-Chapter1-Wallpaper_2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide 1 Title</h5>
+                    <p>Description for Slide 1</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="static/Eglantine-Chapter1-Wallpaper_2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide 2 Title</h5>
+                    <p>Description for Slide 2</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="static/Eglantine-Chapter1-Wallpaper_2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide 3 Title</h5>
+                    <p>Description for Slide 3</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+    
+   </div>
   </div>
-  <div id="Contact" class="parallax-container">
+  
+  
+
+  <div id="TO" class="parallax-container">
     <div class="parallax-layer layer7"></div>
     <div class="parallax-layer layer5"></div>
+    
     <div class="content">
-      <h1>Contanct</h1>
-      <p>kir</p>
+      <div class="row gy-5 ">
+        <div class="col-md-12 ">
+          <img src="static/TO_Logo.png" alt="Twillight Obscura" class="TO-logo">
+          <p>Twillight Obscura is a 2.5D survival game submited for piratejam 2022</p>
+      
+        </div>
+        <div class="col-md-12 ">
+          
+        </div>
+
+      </div>
     </div>
   </div>
-  <div id="TEST" class="parallax-container">
+  
+  <div id="TOGameplay" class="parallax-container">
     
     <div class="parallax-layer layer7"></div>
     <div class="content">
-      <h1>Test</h1>
-      <p>Mikham</p>
+      <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 70%; margin: auto;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/Scaduchemy concepts.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide 1 Title</h5>
+                    <p>Description for Slide 1</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="static/Scaduchemy concepts.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide 2 Title</h5>
+                    <p>Description for Slide 2</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="static/Scaduchemy concepts.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide 3 Title</h5>
+                    <p>Description for Slide 3</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+   </div>
+  </div>
+  <div id="TOConceptArt" class="parallax-container">
+    
+    <div class="parallax-layer layer7"></div>
+    
+    <div class="content">
+      <h1>Concept art</h1>
+      <p></p>
     </div>
   </div>
+  
+  <div id="Contact" class="parallax-container">
+    
+    <div class="parallax-layer layer7"></div>
+    <div class="parallax-layer layer6"></div>
+    <div class="content">
+      <h1>Contanct</h1>
+      <p></p>
+    </div>
+  </div> 
+
+  
+
+
+
+
+
+
   <!-- Bootstrap JavaScript Bundle (includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

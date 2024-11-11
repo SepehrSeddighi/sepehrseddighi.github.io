@@ -5,9 +5,23 @@
     box-sizing: border-box;
   }
   
+  
   body {
-    font-family: Arial, sans-serif;
-    z-index: 10;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; /* Light */
+    font-size: 1vw;
+    z-index: 1000;
+    
+  }
+  
+  /* Apply Open Sans Bold for all titles */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold */
+    margin-bottom: 10%;
+    font-size: 1.5vw;
+    z-index: 1000;
+    
+    
   }
   
   .navbar {
@@ -22,7 +36,9 @@
   .parallax-container {
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    min-width:100vh;
+    min-height: 75vh;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,8 +47,10 @@
     z-index: 8;
     opacity: 1;
     
+    
+    
   }
-
+  
   
   
   /* Parallax layers with background images */
@@ -41,6 +59,8 @@
    
     top: 0;
     left: 0;
+    min-width:100vh;
+    min-height: 100vh;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -146,14 +166,7 @@
     padding: 20vh 0;
   }
   
-  /* Static content sections */
-  .content-section {
-    padding: 100px 20px;
-    text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-    z-index: 20;
-  }
+  
   
   .content-section h2 {
     margin-bottom: 20px;
@@ -164,7 +177,186 @@
 }
 
 .carousel {
-    max-width: 70%; /* Set maximum width of carousel to 70% of the viewport */
+    max-width: 90%; /* Set maximum width of carousel to 70% of the viewport */
+    min-width: 80%;
     margin: 0 auto; /* Center the carousel */
 }
+
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+}
+
+
+/*
+.navbar-nav .nav-item:hover .dropdown-menu {
+  visibility: visible;
+  background-color: transparent;
+  outline: none;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+.dropdown-item:hover {
+  background-color: transparent; 
+  color: #ddd !important;        
+.dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px); 
+  transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+
+}
+.dropdown-menu .dropdown-item:hover,sssss
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active {
+    background-color: transparent !important; 
+    color: white !important; 
+    outline: none !important; 
+    box-shadow: none !important; 
+}
+*/
+
+/* General navbar styling */
+.navbar .dropdown-menu {
+  background: transparent; /* Remove background */
+  border: none; /* Remove borders */
+  padding-top: 0;
+  padding-bottom: 0;
+  transform: scaleY(0); /* Initially hidden for animation */
+  transform-origin: top; /* Animates from top down */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling and opacity */
+  opacity: 0; /* Initially transparent */
+  display: block; /* Ensure it can animate */
+}
+@media (max-width: 992px) { /* Target small screens */
+  .navbar-nav .dropdown-menu {
+    background: transparent; /* Remove background */
+  border: none; /* Remove borders */
+  padding-top: 0;
+  padding-bottom: 0;
   
+   /* Initially transparent */
+  display: none; /* Ensure it can animate */
+  }
+  .navbar-nav .dropdown.show .dropdown-menu,
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display:block;
+    opacity: 0;
+    transform: scaleY(0); /* Initially hidden for animation */
+    transform-origin: top; /* Animates from top down */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling and opacity */
+  }
+  .content {
+    padding: 8vh 5vw;
+    font-size: 2vw;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold */
+    margin-bottom: 3%;
+    font-size: 3vw;
+  }
+  .software-image {
+    width: 10vw;
+    max-width: 100%;
+    min-width: 30%;
+    height: auto;
+    margin-bottom: 5%;
+  }
+  .eglantine-logo {
+    width: 70vw;
+    max-width: 100%;
+    min-width: 60%;
+    height: auto;
+    margin-bottom: 5%;
+  }
+}
+
+/* Show animation when dropdown is open on hover */
+.navbar .dropdown:hover .dropdown-menu {
+  transform: scaleY(1); /* Open the dropdown */
+  opacity: 1; /* Make it fully visible */
+}
+
+/* Styling for the dropdown items */
+.navbar .dropdown-item {
+  color: #888; /* Text color */
+  /* padding: 10px 15px; */
+}
+
+/* Remove background and focus styles */
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:active {
+  background: none !important;
+  color: #fff !important; /* Keeps text color on hover */
+  outline: none;
+}
+
+/* Prevents the default selected blue background on active items in the dropdown */
+.navbar .dropdown-item.active {
+  background: none !important; /* Remove background when active */
+  color: white;
+}
+
+/* Remove background highlight for dropdown items when they are active (via scrollspy) */
+.navbar .nav-link.active {
+  color: white; /* Change navbar item color on scrollspy */
+}
+
+.navbar .dropdown-item.active {
+  background: none !important; /* Ensure active dropdown item has no background */
+}
+.content {
+ 
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30%;
+}
+
+/* Three-column layout */
+.columns {
+  display: flex;
+  
+  flex-wrap: wrap;
+  text-align: left;
+ 
+  
+}
+
+.column {
+  flex: 1;
+  min-width: 10%;
+  margin-bottom: 30%;
+  
+}
+.software-image {
+  width: 15vw;
+  max-width: 100%;
+  min-width: 30%;
+  height: auto;
+  margin-bottom: 30%;
+}
+.eglantine-logo {
+  width: 30vw;
+  max-width: 100%;
+  min-width: 30%;
+  height: auto;
+  margin-bottom: 2%;
+}
+.TO-logo {
+  width: 30vw;
+  max-width: 100%;
+  min-width: 30%;
+  height: auto;
+  margin-bottom: 2%;
+}
+
+
+
+
+
+
+
