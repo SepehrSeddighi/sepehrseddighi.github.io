@@ -67,7 +67,7 @@
   /* Parallax layers with background images */
   .parallax-layer {
     position: absolute;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     
     width: 100%;
