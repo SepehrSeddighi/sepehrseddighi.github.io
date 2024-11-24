@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    text-align: center;
+    text-align: left;
     z-index: 8;
     opacity: 1;
     
@@ -66,6 +66,7 @@
   
   /* Parallax layers with background images */
   .parallax-layer {
+    pointer-events: none;
     position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
@@ -185,16 +186,16 @@
   .content-section h2 {
     margin-bottom: 20px;
   }
-  .carousel-inner img {
-    width: 100%; /* Ensure the image takes up full width of the carousel */
-    height: auto; /* Maintain aspect ratio */
+   .carousel-inner img video{
+    min-width: 50%; 
+    height: auto; 
 }
 
 .carousel {
-    max-width: 90%; /* Set maximum width of carousel to 70% of the viewport */
+    max-width: 90%; 
     min-width: 80%;
-    margin-bottom: -100%; /* Center the carousel */
-}
+    
+} 
 
 
 .navbar {
@@ -329,13 +330,16 @@
   color: #fff;
   margin-bottom: 30%;
 }
+.text-left {
+  text-align: left;
+}
 
 /* Three-column layout */
 .columns {
   display: flex;
   
   flex-wrap: wrap;
-  text-align: left;
+  
  
   
 }
@@ -389,8 +393,16 @@
   z-index: auto; /* Ensure no stacking context issues */
 }
 
+.carousel-control.left, .carousel-control.right {
+  left: 0;
+  z-index: 999999;
+}
 
 
 
+li {
+  /* Adjust font size if needed */
+  margin-bottom: 10%; /* Increase space between list items */
+}
 
 
