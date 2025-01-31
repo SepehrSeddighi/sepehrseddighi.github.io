@@ -11,3 +11,9 @@ document.addEventListener("scroll", function() {
     document.querySelector(".layerhome6").style.transform = `translateY(${scrollPosition * 1}px)`;
     
   });
+  $(document).ready(function(){
+    console.log($('#carouselwithIndicators1').css('height')); // check the initial height of the carousel;
+    
+    // now apply this height as a max-height on all the image items; css will handle the rest;
+    $('#carouselwithIndicators1').find('.carousel-item img').css('max-height', $('#carouselwithIndicators1').css('height'))
+  });

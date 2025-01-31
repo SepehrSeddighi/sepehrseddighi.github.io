@@ -186,17 +186,20 @@
   .content-section h2 {
     margin-bottom: 20px;
   }
-   .carousel-inner img video{
+   /* .carousel-inner img video{
     min-width: 50%; 
     height: auto; 
+} */
+
+
+
+.carousel-item img {
+  margin: 0 auto; /* this will align the image to center. */
+  width: auto; /* for those images which don't have a width specified, but has a max-height will be auto adjusted */
+  background-position: center;
+  height: 30%;
+  width: auto;
 }
-
-.carousel {
-    max-width: 90%; 
-    min-width: 80%;
-    
-} 
-
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
@@ -392,11 +395,11 @@
   position: relative; /* If stacking is necessary, set this */
   z-index: auto; /* Ensure no stacking context issues */
 }
-
+/* 
 .carousel-control.left, .carousel-control.right {
   left: 0;
   z-index: 999999;
-}
+} */
 
 
 
