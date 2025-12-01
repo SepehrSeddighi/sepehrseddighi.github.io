@@ -17,3 +17,21 @@ document.addEventListener("scroll", function() {
     // now apply this height as a max-height on all the image items; css will handle the rest;
     $('#carouselwithIndicators1').find('.carousel-item img').css('max-height', $('#carouselwithIndicators1').css('height'))
   });
+
+
+const thumbs = document.querySelectorAll('.gallery-thumb');
+const overlay = document.getElementById('imageOverlay');
+const overlayImg = document.getElementById('overlayImg');
+
+thumbs.forEach(img => {
+  img.addEventListener('click', () => {
+    overlayImg.src = img.dataset.full || img.src;
+    overlay.style.display = 'flex';
+  });
+});
+
+// Click anywhere to close
+overlay.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  overlayImg.src = '';
+});
